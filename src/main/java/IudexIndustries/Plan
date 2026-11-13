@@ -1,0 +1,28 @@
+Future Plans:
+
+- In config.yml, add an option to enable Auto Punish instead of simply flagging players. Punishments should be configurable, ranging from kicks to permanent or temporary bans.
+
+- Make flag messages and punishment messages customisable through config.yml. This should include separate messages for kicks, bans and temporary bans.
+
+- Add webhook compatibility for sending alerts and detection notifications to external platforms.
+
+- In the future, shorten the jump sample windows to focus exclusively on jumps occurring around hit events.
+- This will help filter out ordinary jumping and focus specifically on jump resets.
+  - Use a KeepAlive packet with a randomly generated ID, sent to the client immediately after sending the DamageEvent packet (if the attacker is a player).
+  - The client will respond to the KeepAlive packet with the same ID.
+  - When the response is received, we can check whether the player performed a jump reset by checking for a Player Input packet in the same tick.
+  - If a jump input is detected in that tick, the player performed a jump reset. Otherwise, they did not.
+  - This means the sample windows will contain only jump reset attempts rather than ordinary jumps.
+    - This will make AJRCheck2 easier to implement.
+    - It should also improve AJRCheck accuracy by filtering out unrelated jumps.
+  - This change will apply to both AJRCheck and AJRCheck2.
+
+- AJRCheck2 should detect consistently low JumpStartStops values rather than only detecting jumps lasting exactly 1 tick.
+- This will allow us to detect clients (cheats) that artificially force their jumps to last longer than 1 tick to bypass existing detection.
+
+- Add a command in the future, such as /JRP (Jump Reset Percentage), with an appropriate permission, allowing admins to view a player's jump reset percentage.
+
+- In the future, collect additional hit information to allow AJR detection to be broken down by hit type.
+  - For example, detect jump resets specifically on sprint hits, critical hits, falling sprint hits, or only while holding W.
+  - This could help identify whether a client is only performing certain types of jump resets.
+  - Potentially incorporate this information into /JRP to provide a more detailed breakdown of a player's jump reset statistics and overall JR skill.

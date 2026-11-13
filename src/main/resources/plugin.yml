@@ -1,0 +1,12 @@
+name: Anti-AJR
+version: '${version}'
+
+main: IudexIndustries.Main
+api-version: '26.1'
+
+authors: [ IudexIndustries ]
+
+permissions:
+  iudex.ajrnotifications:
+    description: Receive auto-jump-reset alerts
+    default: op
