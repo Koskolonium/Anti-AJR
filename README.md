@@ -22,6 +22,5 @@ See the [Future Plans](https://github.com/Koskolonium/Anti-AJR/blob/master/src/m
 - Configurable automatic punishments.
 - Customisable flag and punishment messages.
 - Webhook compatibility.
-- Focusing sample windows exclusively on jumps occurring around hit events, filtering out ordinary jumps.
 - More advanced jump-reset detection to identify potential bypasses.
 - Detailed jump-reset statistics and breakdowns by hit type.
