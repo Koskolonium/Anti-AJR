@@ -16,7 +16,7 @@ public class SPL extends PacketListenerAbstract {
     private final TransactionManager transactionManager;
 
     public SPL(TransactionManager transactionManager) {
-        super(PacketListenerPriority.HIGH);
+        super(PacketListenerPriority.NORMAL);
         this.transactionManager = transactionManager;
     }
 

@@ -14,7 +14,7 @@ public class CPL extends PacketListenerAbstract {
     private final TransactionManager transactionManager;
 
     public CPL(ConcurrentHashMap<UUID, UserData> users, TransactionManager transactionManager) {
-        super(PacketListenerPriority.HIGH);
+        super(PacketListenerPriority.NORMAL);
         this.users = users;
         this.transactionManager = transactionManager;
     }
