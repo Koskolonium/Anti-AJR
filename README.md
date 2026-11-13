@@ -12,7 +12,7 @@ This applies to jumps performed during combat hit windows as well as ordinary ju
 
 Currently, Anti-AJR monitors jumps and checks the number of one-tick jumps within a rolling window of ten samples, including jumps occurring during hit windows.
 
-If more than three of those ten jumps are completed within a single tick, the player is flagged as suspected of using automated jumping.
+If more than three of those ten jumps are completed within a single tick, the player is flagged as suspected of using Auto Jump Resets (AJR).
 
 This is the initial detection method. More advanced consistency analysis and additional checks are planned but are not yet implemented.
 ### Future Development
