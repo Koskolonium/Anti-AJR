@@ -15,11 +15,13 @@ Currently, Anti-AJR monitors jumps and checks the number of one-tick jumps withi
 If more than three of those ten jumps are completed within a single tick, the player is flagged as suspected of using automated jumping.
 
 This is the initial detection method. More advanced consistency analysis and additional checks are planned but are not yet implemented.
-
 ### Future Development
 
-See [`plan.txt`](plan.txt) for planned improvements, including:
-- Additional measures to reduce false positives.
-- More advanced jump behaviour analysis.
-- Countermeasures against potential bypasses.
-- Further improvements to detection reliability.
+See the [Future Plans](https://github.com/Koskolonium/Anti-AJR/blob/master/src/main/java/IudexIndustries/Plan) for planned improvements, including:
+
+- Configurable automatic punishments.
+- Customisable flag and punishment messages.
+- Webhook compatibility.
+- Focusing sample windows exclusively on jumps occurring around hit events, filtering out ordinary jumps.
+- More advanced jump-reset detection to identify potential bypasses.
+- Detailed jump-reset statistics and breakdowns by hit type.
